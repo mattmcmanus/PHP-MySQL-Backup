@@ -1,12 +1,8 @@
 ## Installation
 
 * Download the repository
-* Update backup_db_config.php with 
-** Your database information
-** Desired backup locatoin
-** How many days you would like to keep old backups (default: 7)
-* Either manually run the script or add it to your crontab
-** php /path/to/script/db_backup.php
+* Update backup_db_config.php with your database information, desired backup location and  How many days you would like to keep old backups (default: 7)
+* Either manually run the script or add it to your crontab `php /path/to/script/db_backup.php`
 
 ## Acknowledgements  
 
