@@ -145,8 +145,7 @@ function deleteAfterXDays($dirpath, $CLEANUP_AFTER){
     while ( false !== ($file = readdir($files)) ) {
       $filepath = $dirpath. "/". $file;
       if( is_file($filepath) && @filemtime($filepath) < (time()-($CLEANUP_AFTER * 86400))) {
-        $cleanedup_count++;
-        if ( @unlink($filepath) ) {
+        if ( @unlink($filepath) and strpos($filepath, '.log') !== false) {
           writeLog( "- Deleted old file: ".$file );
         } else {
           error(true,"- Failed to delete old file: ".$file);
